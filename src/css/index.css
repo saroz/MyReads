@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  line-height: 1.5;
+  font-size: 1rem;
+  background: #ffffff;
+  font-weight: 400;
+  font-family: 'Roboto Slab', serif;
+}
+
+.shelfHighlight {
+  font-weight: bold;
+  color: green;
+}

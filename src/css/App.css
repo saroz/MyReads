@@ -1,0 +1,249 @@
+
+.list-books-title {
+  padding: 0 .9375rem;
+  background-image: linear-gradient(to left, #0ba360 0%, #3cba92 100%);
+  min-height: 4rem;
+}
+.list-books-title h1 {
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: rgba(255, 255, 255, .8);
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 .9375rem;
+}
+
+.list-books-content {
+  padding: 0 0 5rem;
+  flex: 1;
+}
+
+.bookshelf {
+  padding: 0 .9375rem;
+  max-width: 60rem;
+  width: 100%;
+  margin: 0 auto 2.5rem;
+}
+
+.bookshelf-title {
+  border-bottom: 1px solid #dedede;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: .9375rem 0;
+  color: rgba(0,0,0, .8);
+}
+.bookshelf-books {
+  text-align: center;
+}
+
+.open-search {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+.open-search a {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #F64C3C;
+  background-color: #ff0844;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 .25rem .625rem rgba(0,0,0,0.1);
+  font-size: 0;
+  position: relative;
+}
+.open-search a::before,
+.open-search a::after{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-color: #fff;
+}
+.open-search a::before{
+  height: .125rem;
+  width: 1.25rem;
+  margin-top: -1px;
+  margin-left: -.625rem;
+}
+.open-search a::after{
+  width: .125rem;
+  height: 1.25rem;
+  margin-top: -.625rem;
+  margin-left: -1px;
+}
+
+
+.search-books-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  box-shadow: 0 .625rem 1.5rem rgba(0,0,0, .04);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  position: relative;
+}
+.search-books-input-wrapper {
+  flex: 1;
+  background: #e9e;
+}
+.search-books-bar input {
+  width: 100%;
+  padding: 0 .9375rem 0 0;
+  height: 100%;
+  font-size: 1rem;
+  font-family: 'Roboto Slab', serif;
+  border: none;
+  outline: none;
+}
+.search-books-bar input:focus {
+  box-shadow: 0 1px 0 #0ba360;
+}
+
+.close-search {
+  display: block;
+  top: 20px;
+  left: 15px;
+  width: 4rem;
+  height: 4rem;
+  background: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  font-size: 0;
+}
+
+.search-books-results {
+  padding: 5rem .625rem 1.25rem;
+}
+
+.close-search::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: .75rem;
+  height: .75rem;
+  border-left: 2px solid #444;
+  border-bottom: 2px solid #444;
+  transform: rotate(45deg);
+  left: 1rem;
+  margin-top: -6px;
+
+}
+.close-search::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 1rem;
+  background-color: #444;
+  left: 1rem;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.books-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 -.9375rem;
+}
+.books-grid li {
+  text-align: left;
+}
+
+.book {
+  width: 12rem;
+  padding: 0 .9375rem;
+}
+.book-title,
+.book-authors {
+  font-size: 0.8em;
+}
+.book-title {
+  margin-top: .9375rem;
+  font-size: .875rem;
+  line-height: 1.4;
+}
+.book-authors {
+  color: #999;
+  font-size: .75rem;
+  margin-top: .25rem;
+}
+
+.book-top {
+  position: relative;
+  height: 16rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.book-shelf-changer {
+  position: absolute;
+  right: -.5rem;
+  bottom: -.9375rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #3cba92;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.06), 0 .25rem .625rem rgba(0,0,0,0.1);
+
+}
+.book-option{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.book-option ,
+.book-option::before,
+.book-option::after {
+  content: '';
+  position: absolute;
+  height: .25rem;
+  width: .25rem;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -.125rem;
+  z-index: 9;
+}
+.book-option::before{
+  content: '';
+  left: -.5rem;
+}
+.book-option::before,
+.book-option::after {
+  content: '';
+  right: -.5rem;
+}
+
+
+.book-shelf-changer select {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
+
+.book-cover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background: #eee;
+  width: 10.125rem;
+  height: 14rem;
+  background-size: cover;
+}
+.book-cover-title {
+  padding: 20px 10px 0;
+  text-align: center;
+  font-size: 0.8em;
+}
